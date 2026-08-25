@@ -1,0 +1,10 @@
+name: Strenght
+version: 2.0.0
+main: me.qwert.strenght.Strenght
+api-version: '1.21'
+folia-supported: true
+
+commands:
+  strength:
+    description: Управляет силой игрока
+    usage: /strength [info]
