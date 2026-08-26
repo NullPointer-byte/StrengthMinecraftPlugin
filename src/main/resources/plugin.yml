@@ -8,3 +8,6 @@ commands:
   strength:
     description: Управляет силой игрока
     usage: /strength [info]
+
+softdepend:
+  - PlaceholderAPI

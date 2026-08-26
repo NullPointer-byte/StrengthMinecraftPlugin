@@ -8,6 +8,7 @@ import me.qwert.strenght.listener.CombatListener;
 import me.qwert.strenght.listener.KillListener;
 import me.qwert.strenght.listener.RapidFireListener;
 import me.qwert.strenght.perk.PerkManager;
+import me.qwert.strenght.placeholder.StrengthExpansion;
 
 public final class Strenght extends JavaPlugin {
 
@@ -45,6 +46,18 @@ public final class Strenght extends JavaPlugin {
         getCommand("strength").setExecutor(
             new StrengthCommand(this)
         );
+
+        if (getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
+
+        new StrengthExpansion(this).register();
+
+        getLogger().info("PlaceholderAPI подключён!");
+    } else {
+
+        getLogger().warning(
+                "PlaceholderAPI не найден. Placeholder'ы Strength недоступны."
+        );
+    }
 
         getLogger().info("Strenght включен!");
     }
